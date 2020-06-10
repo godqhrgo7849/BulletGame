@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 35135201}
   - component: {fileID: 35135200}
   - component: {fileID: 35135199}
+  - component: {fileID: 35135203}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Untagged
@@ -214,6 +215,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &35135203
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35135198}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 100
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &216988136
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +243,7 @@ GameObject:
   - component: {fileID: 216988139}
   - component: {fileID: 216988138}
   - component: {fileID: 216988137}
+  - component: {fileID: 216988141}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -307,6 +325,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &216988141
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216988136}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 100
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &474256402
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +600,7 @@ GameObject:
   - component: {fileID: 1401887525}
   - component: {fileID: 1401887524}
   - component: {fileID: 1401887523}
+  - component: {fileID: 1401887527}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -647,6 +682,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!54 &1401887527
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401887522}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 100
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1480244493
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,9 +821,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1862368429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecbc1d94348db74bbf43849eff6d4de, type: 3}
+  m_Script: {fileID: 11500000, guid: d7fdd43a975f5094fbb0975eb1a3adf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerRigidbody: {fileID: 0}
+  speed: 8
 --- !u!114 &1862368432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,18 +838,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca34a0f017bbd084583f96e66cd25c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1862368433
-MonoBehaviour:
+--- !u!136 &1862368436
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862368429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecbc1d94348db74bbf43849eff6d4de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0.2}
 --- !u!1 &2006752434
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +864,7 @@ GameObject:
   - component: {fileID: 2006752437}
   - component: {fileID: 2006752436}
   - component: {fileID: 2006752435}
+  - component: {fileID: 2006752439}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Untagged
@@ -890,3 +946,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!54 &2006752439
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006752434}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 100
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
