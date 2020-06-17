@@ -56,9 +56,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Animal.cs" />
+     <Compile Include="Assets\Bullet.cs" />
+     <Compile Include="Assets\BulletSpawner.cs" />
      <Compile Include="Assets\Cat.cs" />
      <Compile Include="Assets\Catcs.cs" />
-     <Compile Include="Assets\PlayerControllor.cs" />
+     <Compile Include="Assets\PlayerController.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
